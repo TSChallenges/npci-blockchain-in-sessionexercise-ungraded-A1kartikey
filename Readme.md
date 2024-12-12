@@ -86,3 +86,57 @@ Ensure that:
 * **Election Control:**
            Add functionality to start and stop the election.
 
+
+# **Election Lifecycle Management**
+**Advanced Question**
+
+Enhance the SimpleVoting contract to include the following features:
+1. Add lifecycle states for the election: Created, Voting, and Ended.
+2. Allow the admin to start and end the voting phase explicitly using appropriate functions.
+3. Restrict actions (like voting or adding candidates) based on the current election state: 
+     * Adding candidates is allowed only in the Created state.
+     * Voting is allowed only in the Voting state.
+     * Retrieving the winner is allowed only in the Ended state.
+4. Emit events to track state changes (ElectionStarted, ElectionEnded).
+
+# Key Learning Points
+
+**State Management:**
+* Using enum to define and manage contract states.
+* Applying state-based restrictions with custom modifiers.
+
+**Lifecycle Awareness:**
+
+Understanding how to control contract functionality through lifecycle phases.
+
+**Event Emission:**
+
+Emitting and capturing events to track state transitions and key actions.
+
+# Testing the Enhanced Contract in Remix
+
+**Deploy the Contract:**
+* Deploy the contract with your account as the admin.
+* Check that the initial state is Created.
+
+**Add Candidates:**
+* Use the addCandidate function to add multiple candidates while in the Created state.
+* Confirm that candidates are added by checking the candidates mapping.
+
+**Start the Election:**
+* Call the startElection function to transition to the Voting state.
+* Verify that adding candidates is now restricted.
+
+**Vote for Candidates:**
+* Switch accounts in Remix (via MetaMask or the "Account" dropdown).
+* Use the vote function to vote for candidates by their IDs.
+* Check that duplicate voting is prevented and invalid candidate IDs are rejected.
+
+**End the Election:**
+* Call the endElection function to transition to the Ended state.
+* Verify that voting is now restricted.
+
+**Get the Winner:**
+* Use the getWinner function to retrieve the name and vote count of the winning candidate.
+* Ensure this is only accessible in the Ended state.
+
