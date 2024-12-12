@@ -56,18 +56,12 @@ contract AdvancedVoting {
 
     // Function to vote for a candidate (Allowed only in Voting state)
     function vote(uint256 candidateId) external inState(ElectionState.Voting) {
-        require(!hasVoted[msg.sender], "You have already voted.");
-        require(candidateId < totalCandidates, "Invalid candidate ID.");
-
-        hasVoted[msg.sender] = true;
-        candidates[candidateId].voteCount++;
-        emit VoteCast(msg.sender, candidateId);
+        #Todo
     }
 
     // Function to end the election (Allowed only in Voting state)
     function endElection() external onlyAdmin inState(ElectionState.Voting) {
-        state = ElectionState.Ended;
-        emit ElectionEnded();
+        #Todo
     }
 
     // Function to get the winner (Allowed only in Ended state)
@@ -75,10 +69,7 @@ contract AdvancedVoting {
         uint256 maxVotes = 0;
         uint256 winnerId = 0;
 
-        for (uint256 i = 0; i < totalCandidates; i++) {
-            if (candidates[i].voteCount > maxVotes) {
-                maxVotes = candidates[i].voteCount;
-                winnerId = i;
+        #Todo
             }
         }
 
