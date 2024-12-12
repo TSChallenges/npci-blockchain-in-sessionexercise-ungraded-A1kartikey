@@ -4,10 +4,10 @@ Blockchain technology is transforming trust and decentralization, with smart con
 
 The goal is to create a decentralized voting system where participants can:
 
-**Vote for Candidates:** Cast votes for predefined candidates.
-**Track Votes:** Check real-time vote counts.
-**Prevent Double Voting:** Ensure users vote only once.
-**Administer Elections:** Allow an admin to add candidates.
+* **Vote for Candidates:** Cast votes for predefined candidates.
+* **Track Votes:** Check real-time vote counts.
+* **Prevent Double Voting:** Ensure users vote only once.
+* **Administer Elections:** Allow an admin to add candidates.
 
 
 # Exercise Overview
@@ -80,8 +80,8 @@ Open the SimpleVoting.sol file. The starter code includes TODOs with clear instr
 * Submit the link to your GitHub fork for review.
 
 # Bonus Tasks (Optional for Advanced Participants)
-* Election Results:
+* **Election Results:**
            Add a getWinner function to determine the candidate with the most votes.
-* Election Control:
+* **Election Control:**
            Add functionality to start and stop the election.
 
