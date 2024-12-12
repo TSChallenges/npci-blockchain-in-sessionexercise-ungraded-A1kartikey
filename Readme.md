@@ -63,8 +63,8 @@ Open the SimpleVoting.sol file. The starter code includes TODOs with clear instr
 
 Ensure that:
 
-      * The same address cannot vote twice.
-      * Only valid candidate IDs are accepted.
+* The same address cannot vote twice.
+* Only valid candidate IDs are accepted.
 
 **Get Votes:**
 * Call the getVotes function with a candidate ID to see the total votes.
